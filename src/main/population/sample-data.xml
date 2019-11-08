@@ -191,6 +191,23 @@
  	<property name="threshold" value="1.00"/>
  </bean>
  
+ <!-- Commercial banners -->
+ <bean id="commercialBanner01" class="acme.entities.banners.CommercialBanner">
+ 	<property name="picture" value="coca cola picture"/>
+ 	<property name="slogan" value="Let's do it together"/>
+ 	<property name="url" value="https://www.cocacola.es/es/home/"/>
+ 	<property name="creditCard" value="4485715860868875"/>
+ </bean>
+ 
+ <!-- Non commercial banners -->
+  <bean id="nonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
+ 	<property name="picture" value="global warning picture"/>
+ 	<property name="slogan" value="We change our behavior or change our planet"/>
+ 	<property name="url" value="https://www.nationalgeographic.es/medio-ambiente/que-es-el-calentamiento-global"/>
+ 	<property name="jingle" value="Despacito"/>
+ </bean>
+ 
+ 
   
 
 </beans>

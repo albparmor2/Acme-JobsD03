@@ -49,6 +49,8 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.announcement = Anuncios
 master.menu.administrator.costumisation = Customización
+master.menu.administrator.commercial-banner = Banners comerciales
+master.menu.administrator.non-commercial-banner = Banners no comerciales
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.provider ########################################################
