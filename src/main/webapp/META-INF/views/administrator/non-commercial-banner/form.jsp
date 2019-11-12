@@ -18,7 +18,7 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="administrator.non-commercial-banner.form.label.picture" path="picture"/>
 	<acme:form-moment code="administrator.non-commercial-banner.form.label.slogan" path="slogan"/>
-	<acme:form-url code="administrator.non-commercial-banner.label.url" path="url"/>
+	<acme:form-url code="administrator.non-commercial-banner.form.label.url" path="url"/>
 	<acme:form-textarea code="administrator.non-commercial-banner.form.label.jingle" path="jingle"/>
 	
 	<acme:form-return code="administrator.non-commercial-banner.form.button.return"/>
