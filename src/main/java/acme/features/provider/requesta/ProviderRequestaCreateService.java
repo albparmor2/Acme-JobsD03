@@ -60,6 +60,12 @@ public class ProviderRequestaCreateService implements AbstractCreateService<Prov
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Requesta r = null;
+
+		r = this.repository.existRequesta(entity.getTicker());
+		errors.state(request, r == null, "ticker", "There are any request with this ticker");
+
 	}
 
 	@Override

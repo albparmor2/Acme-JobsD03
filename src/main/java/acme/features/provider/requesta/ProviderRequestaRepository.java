@@ -17,4 +17,7 @@ public interface ProviderRequestaRepository extends AbstractRepository {
 
 	@Query("select a from Requesta a")
 	Collection<Requesta> findManyAll();
+
+	@Query("select a from Requesta a where a.ticker = ?1")
+	Requesta existRequesta(String ticker);
 }
