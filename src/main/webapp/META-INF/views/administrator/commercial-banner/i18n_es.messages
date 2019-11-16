@@ -13,6 +13,9 @@ administrator.commercial-banner.form.label.slogan = Eslogan:
 administrator.commercial-banner.form.label.url = Url:
 administrator.commercial-banner.form.label.creditCard = Tarjeta de crédito:
 administrator.commercial-banner.form.button.return = Volver
+administrator.commercial-banner.form.button.create = Crear
+administrator.commercial-banner.form.button.update = Editar
+administrator.commercial-banner.form.button.delete = Borrar
 
 administrator.commercial-banner.list.label.picture = Foto
 administrator.commercial-banner.list.label.slogan = Eslogan
