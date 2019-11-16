@@ -1,4 +1,4 @@
-# i18n_en.messages
+# i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -8,9 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-administrator.costumisation.form.label.spamWord = Spam words:
-administrator.costumisation.form.label.threshold = Threshold:
-administrator.costumisation.form.button.return = Return
+administrator.customisation.form.label.spamWord = Palabras de spam:
+administrator.customisation.form.label.threshold = Umbral:
 
-administrator.costumisation.list.label.spamWord = Spam words
-administrator.costumisation.list.label.threshold = Threshold
+administrator.customisation.form.button.update = Editar
+
+administrator.customisation.form.button.return = Volver
+
+
+administrator.customisation.list.label.spamWord = Palabras de spam
+administrator.customisation.list.label.threshold = Umbral

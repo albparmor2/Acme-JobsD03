@@ -1,33 +1,33 @@
 
-package acme.features.administrator.costumisation;
+package acme.features.administrator.customisation;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.costumisations.Costumisation;
+import acme.entities.customisations.Customisation;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorCostumisationListService implements AbstractListService<Administrator, Costumisation> {
+public class AdministratorCustomisationListService implements AbstractListService<Administrator, Customisation> {
 
 	@Autowired
-	AdministratorCostumisationRepository repository;
+	AdministratorCustomisationRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Costumisation> request) {
+	public boolean authorise(final Request<Customisation> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Costumisation> request, final Costumisation entity, final Model model) {
+	public void unbind(final Request<Customisation> request, final Customisation entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -36,10 +36,10 @@ public class AdministratorCostumisationListService implements AbstractListServic
 	}
 
 	@Override
-	public Collection<Costumisation> findMany(final Request<Costumisation> request) {
+	public Collection<Customisation> findMany(final Request<Customisation> request) {
 		assert request != null;
 
-		Collection<Costumisation> result;
+		Collection<Customisation> result;
 
 		result = this.repository.findManyAll();
 

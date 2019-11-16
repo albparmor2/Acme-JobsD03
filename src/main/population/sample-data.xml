@@ -184,10 +184,9 @@
  	<property name="stars" value="5"/>
  </bean>
  
- <!-- Costumisation -->
-  <bean id="costumisation01" class="acme.entities.costumisations.Costumisation">
- 	<property name="spamWord" value="sex,hard core,viagra,cialis,nigeria,you’ve won,million dollar,sexo,
- 	tú has ganado, millón de dolares"/>
+ <!-- Customisation -->
+  <bean id="customisation01" class="acme.entities.customisations.Customisation">
+ 	<property name="spamWord" value="sex,hard core,viagra,cialis,nigeria,you’ve won,million dollar,sexo,tú has ganado,millón de dolares"/>
  	<property name="threshold" value="1.00"/>
  </bean>
  
