@@ -65,13 +65,21 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		Offer o = null;
 
 		o = this.repository.existOffer(entity.getTicker());
-		errors.state(request, o == null, "ticker", "There are any offer with this ticker");
+		errors.state(request, o == null, "ticker", "consumer.offer.form.error.existOffer");
+
+		Boolean confirm = request.getModel().getBoolean("confirmOffer");
+		errors.state(request, confirm, "confirmOffer", "acme.error.confirm");
 
 		Money minR = entity.getMinReward();
-		errors.state(request, minR.getCurrency().equals("€"), "minReward", "The money must be €");
-
+		if (!errors.hasErrors("minReward")) {
+			errors.state(request, minR.getAmount() > 0, "minReward", "acme.money.error.positive");
+			errors.state(request, minR.getCurrency().equals("€"), "minReward", "acme.money.error.currency");
+		}
 		Money maxR = entity.getMaxReward();
-		errors.state(request, maxR.getCurrency().equals("€"), "maxReward", "The money must be €");
+		if (!errors.hasErrors("maxReward")) {
+			errors.state(request, maxR.getAmount() > 0, "maxReward", "acme.money.error.positive");
+			errors.state(request, maxR.getCurrency().equals("€"), "maxReward", "acme.money.error.currency");
+		}
 	}
 
 	@Override

@@ -16,9 +16,12 @@ consumer.offer.form.label.minReward = Recompensa mínima
 consumer.offer.form.label.maxReward = Recompensa máxima
 consumer.offer.form.label.ticker = ID
 consumer.offer.form.button.return = Volver
+consumer.offer.form.label.confirmOffer = Confirmar
 
 consumer.offer.list.label.moment = Momento
 consumer.offer.list.label.title = Título
 consumer.offer.list.label.deadline = Fecha límite
 consumer.offer.list.label.minReward = Recompensa mínima
 consumer.offer.list.label.maxReward = Recompensa máxima
+
+consumer.offer.form.error.existOffer = Ya existe alguna oferta con esta id

@@ -29,6 +29,7 @@
 	<acme:form-money code="consumer.offer.form.label.minReward" path="minReward"/>
 	<acme:form-money code="consumer.offer.form.label.maxReward" path="maxReward"/>
 	<acme:form-textbox code="consumer.offer.form.label.ticker" path="ticker"/>
+	<acme:form-checkbox code="consumer.offer.form.label.confirmOffer" path="confirmOffer"/>
 	
 	<acme:form-submit test="${command == 'create'}"
 	code="consumer.offer.form.button.create" 
