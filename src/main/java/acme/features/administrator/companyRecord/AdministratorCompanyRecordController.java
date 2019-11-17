@@ -1,5 +1,5 @@
 
-package acme.features.administrator.announcement;
+package acme.features.administrator.companyRecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,29 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.announcements.Announcement;
+import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/announcement/")
-public class AdministratorAnnouncementController extends AbstractController<Administrator, Announcement> {
+@RequestMapping("/administrator/company-record/")
+public class AdministratorCompanyRecordController extends AbstractController<Administrator, CompanyRecord> {
 
 	@Autowired
-	private AdministratorAnnouncementListService	listService;
+	private AdministratorCompanyRecordListService	listService;
 
 	@Autowired
-	private AdministratorAnnouncementShowService	showService;
+	private AdministratorCompanyRecordShowService	showService;
 
 	@Autowired
-	private AdministratorAnnouncementCreateService	createService;
+	private AdministratorCompanyRecordCreateService	createService;
 
 	@Autowired
-	private AdministratorAnnouncementUpdateService	updateService;
+	private AdministratorCompanyRecordUpdateService	updateService;
 
 	@Autowired
-	private AdministratorAnnouncementDeleteService	deleteService;
+	private AdministratorCompanyRecordDeleteService	deleteService;
 
 
 	@PostConstruct
