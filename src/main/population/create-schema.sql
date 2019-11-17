@@ -82,7 +82,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `costumisation` (
+    create table `customisation` (
        `id` integer not null,
         `version` integer not null,
         `spam_word` varchar(255),

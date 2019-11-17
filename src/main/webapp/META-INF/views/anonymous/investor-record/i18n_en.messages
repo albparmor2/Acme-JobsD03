@@ -8,13 +8,14 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-anonymous.investor-record.form.label.name = Name
-anonymous.investor-record.form.label.sector = Sector
-anonymous.investor-record.form.label.investingStatement = Investing statement
-anonymous.investor-record.form.label.stars = Stars
+anonymous.investor-record.form.label.name = Name:
+anonymous.investor-record.form.label.sector = Sector:
+anonymous.investor-record.form.label.investingStatement = Investing statement:
+anonymous.investor-record.form.label.stars = Stars:
 
 
 anonymous.investor-record.list.label.name = Name
 anonymous.investor-record.list.label.sector = Sector
+anonymous.investor-record.list.label.stars = Stars
 
 anonymous.investor-record.form.button.return = Return

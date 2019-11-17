@@ -15,10 +15,11 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-	<acme:form-textarea code="administrator.costumisation.form.label.spamWord" path="spamWord"/>
-	<acme:form-textbox code="administrator.costumisation.form.label.threshold" path="threshold"/>
-	
-	<acme:form-return code="administrator.costumisation.form.button.return"/>
+<acme:form>
+	<acme:form-textarea code="administrator.customisation.form.label.spamWord" path="spamWord"/>
+	<acme:form-textbox code="administrator.customisation.form.label.threshold" path="threshold"/>
+	<acme:form-submit test="${command == 'show'}" code="administrator.customisation.form.button.update" action="/administrator/customisation/update"/>
+	<acme:form-submit test="${command == 'update'}" code="administrator.customisation.form.button.update" action="/administrator/customisation/update"/>
+	<acme:form-return code="administrator.customisation.form.button.return"/>
 	
 </acme:form>

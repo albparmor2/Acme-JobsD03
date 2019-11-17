@@ -1,5 +1,5 @@
 
-package acme.entities.costumisations;
+package acme.entities.customisations;
 
 import javax.persistence.Entity;
 import javax.validation.constraints.Max;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 @Setter
 @Getter
-public class Costumisation extends DomainEntity {
+public class Customisation extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
 

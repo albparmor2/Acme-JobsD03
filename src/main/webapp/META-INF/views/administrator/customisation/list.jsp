@@ -17,6 +17,6 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="administrator.costumisation.list.label.spamWord" path="spamWord" width="80%"/>
-	<acme:list-column code="administrator.costumisation.list.label.threshold" path="threshold" width="20%"/>
+	<acme:list-column code="administrator.customisation.list.label.spamWord" path="spamWord" width="80%"/>
+	<acme:list-column code="administrator.customisation.list.label.threshold" path="threshold" width="20%"/>
 </acme:list>

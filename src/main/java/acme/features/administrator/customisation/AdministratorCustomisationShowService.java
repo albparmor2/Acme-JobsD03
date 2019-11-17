@@ -1,31 +1,31 @@
 
-package acme.features.administrator.costumisation;
+package acme.features.administrator.customisation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.costumisations.Costumisation;
+import acme.entities.customisations.Customisation;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorCostumisationShowService implements AbstractShowService<Administrator, Costumisation> {
+public class AdministratorCustomisationShowService implements AbstractShowService<Administrator, Customisation> {
 
 	@Autowired
-	AdministratorCostumisationRepository repository;
+	AdministratorCustomisationRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Costumisation> request) {
+	public boolean authorise(final Request<Customisation> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Costumisation> request, final Costumisation entity, final Model model) {
+	public void unbind(final Request<Customisation> request, final Customisation entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -34,10 +34,10 @@ public class AdministratorCostumisationShowService implements AbstractShowServic
 	}
 
 	@Override
-	public Costumisation findOne(final Request<Costumisation> request) {
+	public Customisation findOne(final Request<Customisation> request) {
 		assert request != null;
 
-		Costumisation result;
+		Customisation result;
 		int id;
 
 		id = request.getModel().getInteger("id");

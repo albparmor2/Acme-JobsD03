@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/costumisation/list" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/costumisation/list.jsp" />
+	<definition name="administrator/customisation/list" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/customisation/list.jsp" />
 	</definition>
 	
-	<definition name="administrator/costumisation/form" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/costumisation/form.jsp" />
+	<definition name="administrator/customisation/form" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/customisation/form.jsp" />
 	</definition>
 
 </tiles-definitions>

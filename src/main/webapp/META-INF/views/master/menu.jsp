@@ -46,7 +46,7 @@
 			<acme:menu-suboption code="master.menu.administrator.investor-record.create" action="/administrator/investor-record/create"/>
       <acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list"/>
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create"/>
-			<acme:menu-suboption code="master.menu.administrator.costumisation" action="/administrator/costumisation/list"/>
+			<acme:menu-suboption code="master.menu.administrator.customisation" action="/administrator/customisation/list"/>
 			<acme:menu-suboption code="master.menu.administrator.commercial-banner" action="/administrator/commercial-banner/list"/>
 			<acme:menu-suboption code="master.menu.administrator.non-commercial-banner" action="/administrator/non-commercial-banner/list"/>
 			<acme:menu-separator/>
