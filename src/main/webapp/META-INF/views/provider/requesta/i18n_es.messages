@@ -14,10 +14,14 @@ provider.requesta.form.label.moment = Momento:
 provider.requesta.form.label.description = Descripcion:
 provider.requesta.form.label.deadline = Fecha límite:
 provider.requesta.form.label.reward = Recompensa:
+provider.requesta.form.label.confirmRequesta = Confirmar
 provider.requesta.form.button.return  = Volver
 provider.requesta.form.button.create = Crear
+
 
 provider.requesta.list.label.moment = Momento
 provider.requesta.list.label.title = Título
 provider.requesta.list.label.deadline = Fecha límite
 provider.requesta.list.label.reward = Recompensa
+
+provider.requesta.form.error.existRequest = Ya existe alguna solicitud con esta id

@@ -11,6 +11,7 @@ import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -64,8 +65,16 @@ public class ProviderRequestaCreateService implements AbstractCreateService<Prov
 		Requesta r = null;
 
 		r = this.repository.existRequesta(entity.getTicker());
-		errors.state(request, r == null, "ticker", "There are any request with this ticker");
+		errors.state(request, r == null, "ticker", "provider.requesta.form.error.existRequest");
 
+		Boolean confirm = request.getModel().getBoolean("confirmRequesta");
+		errors.state(request, confirm, "confirmRequesta", "acme.error.confirm");
+
+		Money reward = entity.getReward();
+		if (!errors.hasErrors("reward")) {
+			errors.state(request, reward.getAmount() > 0, "reward", "acme.money.error.positive");
+			errors.state(request, reward.getCurrency().equals("€"), "reward", "acme.money.error.currency");
+		}
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-<%--
+a<%--
 - form.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
@@ -21,7 +21,7 @@
     <acme:form-textbox code="provider.requesta.form.label.ticker" path="ticker" readonly="true"/>
 	<acme:form-textbox code="provider.requesta.form.label.title" path="title" readonly="true"/>
 	<acme:form-moment code="provider.requesta.form.label.moment" path="moment" readonly="true"/>
-	<acme:form-url code="provider.requesta.form.label.description" path="description" readonly="true"/>
+	<acme:form-textarea code="provider.requesta.form.label.description" path="description" readonly="true"/>
 	<acme:form-moment code="provider.requesta.form.label.deadline" path="deadline" readonly="true"/>
 	<acme:form-money code="provider.requesta.form.label.reward" path="reward" readonly="true"/>
 </jstl:if>
@@ -32,6 +32,7 @@
 	<acme:form-url code="provider.requesta.form.label.description" path="description"/>
 	<acme:form-moment code="provider.requesta.form.label.deadline" path="deadline"/>
 	<acme:form-money code="provider.requesta.form.label.reward" path="reward"/>
+	<acme:form-checkbox code="provider.requesta.form.label.confirmRequesta" path="confirmRequesta"/>
 	
 	<acme:form-submit
 	 code="provider.requesta.form.button.create"

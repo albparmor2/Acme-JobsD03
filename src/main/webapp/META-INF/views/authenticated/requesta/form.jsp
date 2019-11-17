@@ -19,8 +19,8 @@
     <acme:form-textbox code="authenticated.requesta.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="authenticated.requesta.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.requesta.form.label.moment" path="moment"/>
-	<acme:form-url code="authenticated.requesta.form.label.description" path="description"/>
-	<acme:form-textarea code="authenticated.requesta.form.label.deadline" path="deadline"/>
+	<acme:form-textarea code="authenticated.requesta.form.label.description" path="description"/>
+	<acme:form-moment code="authenticated.requesta.form.label.deadline" path="deadline"/>
 	<acme:form-money code="authenticated.requesta.form.label.reward" path="reward"/>
 	
 	<acme:form-return code="authenticated.requesta.form.button.return"/>

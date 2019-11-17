@@ -18,7 +18,7 @@
 <acme:form readonly="true">
 	<acme:form-textbox code="anonymous.investor-record.form.label.name" path="name"/>
 	<acme:form-textbox code="anonymous.investor-record.form.label.sector" path="sector"/>
-	<acme:form-textbox code="anonymous.investor-record.form.label.investingStatement" path="investingStatement"/>
+	<acme:form-money code="anonymous.investor-record.form.label.investingStatement" path="investingStatement"/>
 	<acme:form-textbox code="anonymous.investor-record.form.label.stars" path="stars"/>
 	
 	<acme:form-return code="anonymous.investor-record.form.button.return"/>
