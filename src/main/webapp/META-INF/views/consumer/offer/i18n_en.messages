@@ -16,6 +16,7 @@ consumer.offer.form.label.minReward = Minimum reward
 consumer.offer.form.label.maxReward = Maximum reward
 consumer.offer.form.label.ticker = Ticker
 consumer.offer.form.button.return= return
+consumer.offer.form.button.create = Create
 consumer.offer.form.label.confirmOffer = Confirm
 
 consumer.offer.list.label.moment = Moment
