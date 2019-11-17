@@ -51,7 +51,10 @@ master.menu.administrator.announcement = Anuncios
 master.menu.administrator.costumisation = Customización
 master.menu.administrator.commercial-banner = Banners comerciales
 master.menu.administrator.non-commercial-banner = Banners no comerciales
+master.menu.administrator.investor-record = Registro de inversiones
 master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.investor-record.create = Crear registro de inversiones
+
 
 # master.menu.provider ########################################################
 
@@ -62,6 +65,7 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+consumer.offer.form.button.create = Crear oferta
 
 # master.menu.user-account ####################################################
 
