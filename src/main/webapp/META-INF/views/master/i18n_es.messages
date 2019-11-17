@@ -57,7 +57,9 @@ master.menu.administrator.challenge = Retos
 master.menu.administrator.challenge.create = Crear reto
 master.menu.administrator.customisation = Customización
 master.menu.administrator.commercial-banner = Banners comerciales
+master.menu.administrator.commercial-banner.create = Crear banner comercial
 master.menu.administrator.non-commercial-banner = Banners no comerciales
+master.menu.administrator.non-commercial-banner.create = Crear banner no comercial
 master.menu.administrator.shutdown = Parar el sistema
 
 # master.menu.provider ########################################################
