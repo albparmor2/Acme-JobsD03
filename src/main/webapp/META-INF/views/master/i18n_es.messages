@@ -48,6 +48,13 @@ master.menu.authenticated.challenges = Retos
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.announcement = Anuncios
+master.menu.administrator.announcement.create = Crear nuevo anuncio
+master.menu.administrator.company-record = Registro de compañias
+master.menu.administrator.company-record.create = Crear registro de compañia
+master.menu.administrator.investor-record = Registro de inversiones
+master.menu.administrator.investor-record.create = Crear registro de inversiones
+master.menu.administrator.challenge = Retos
+master.menu.administrator.challenge.create = Crear reto
 master.menu.administrator.customisation = Customización
 master.menu.administrator.commercial-banner = Banners comerciales
 master.menu.administrator.non-commercial-banner = Banners no comerciales
@@ -56,12 +63,14 @@ master.menu.administrator.shutdown = Parar el sistema
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.requesta = Solicitudes
+master.menu.provider.requesta.create = Crear solicitud
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offer.create = Crear oferta
 
 # master.menu.user-account ####################################################
 
@@ -107,4 +116,3 @@ master.license.text = \
 	durante un máximo de 31 días y "language" para almacenar sus preferencias de \
 	lenguage.  Además, almacenamos un ítem llamado "returnStack" en el almacenamiento \
 	local de su navegador para saber dónde tienen que ir algunos botones.
-	
