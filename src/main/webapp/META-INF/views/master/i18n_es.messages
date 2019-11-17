@@ -50,6 +50,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.announcement = Anuncios
 master.menu.administrator.company-record = Registro de compañias
 master.menu.administrator.company-record.create = Crear registro de compañia
+master.menu.administrator.announcement.create = Crear nuevo anuncio
 master.menu.administrator.costumisation = Customización
 master.menu.administrator.commercial-banner = Banners comerciales
 master.menu.administrator.non-commercial-banner = Banners no comerciales
@@ -58,7 +59,8 @@ master.menu.administrator.shutdown = Parar el sistema
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.requesta = Solicitudes
+master.menu.provider.requesta.create = Crear solicitud
 
 # master.menu.consumer ##########################################################
 
