@@ -8,6 +8,7 @@ import acme.entities.investorRecords.InvestorRecord;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.datatypes.Money;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
@@ -58,6 +59,12 @@ public class AdministratorInvestorRecordCreateService implements AbstractCreateS
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Money invStatement = entity.getInvestingStatement();
+		if (!errors.hasErrors("investingStatement")) {
+			errors.state(request, invStatement.getAmount() > 0, "investingStatement", "acme.money.error.positive");
+			errors.state(request, invStatement.getCurrency().equals("€"), "investingStatement", "acme.money.error.currency");
+		}
 	}
 
 	@Override
