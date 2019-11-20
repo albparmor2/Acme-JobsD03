@@ -2,6 +2,7 @@
 package acme.entities.companyRecords;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -37,8 +38,7 @@ public class CompanyRecord extends DomainEntity {
 	private String				website;
 
 	@NotBlank
-	@Pattern(regexp = "^\\+\\d{1,3}\\ \\(\\d{1,4}\\)\\ \\d{6,10}$",
-		message = "Phone number must adhere to the following pattern: ''+999 (9999) 999999'', where ''+999'' denotes an optional international prefix in range ''+1'' up to ''+999'', ''(9999)'' denotes an optional area code in range ''(0)'' up to ''(9999)'', and ''999999'' denotes a local phone number with a minimum of six digits and a maximum of ten digits")
+	@Pattern(regexp = "^([+]\\d{1,3}\\s)?([(]\\d{1,4}[)]\\s)?\\d{6,10}$")
 	private String				contactPhone;
 
 	@NotBlank
@@ -50,6 +50,7 @@ public class CompanyRecord extends DomainEntity {
 	private Integer				stars;
 
 
+	@Transient
 	public String getIncorporated() {
 		String res = "Indeterminate";
 		Integer x = this.name.length();

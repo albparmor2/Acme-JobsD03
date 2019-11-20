@@ -3,7 +3,10 @@ package acme.entities.requestas;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
@@ -19,6 +22,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "deadline"), @Index(columnList = "ticker")
+})
 public class Requesta extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -26,12 +32,10 @@ public class Requesta extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 
@@ -42,6 +46,7 @@ public class Requesta extends DomainEntity {
 	private Money				reward;
 
 	@NotBlank
+	@Column(unique = true)
 	@Pattern(regexp = "^R\\w{4}\\-\\d{5}$")
 	private String				ticker;
 
