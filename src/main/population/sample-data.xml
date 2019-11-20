@@ -195,7 +195,11 @@
  	<property name="picture" value="Coca-Cola Picture"/>
  	<property name="slogan" value="Let's do it together"/>
  	<property name="url" value="https://www.cocacola.es/es/home/"/>
- 	<property name="creditCard" value="4485715860868875"/>
+ 	<property name="creditCardNumber" value="4485715860868875"/>
+ 	<property name="holder" value="Marco Antonio Fernández González"/>
+ 	<property name="brand" value="Visa"/>
+ 	<property name="expirationDate" value="2020/06/08 14:00"/>
+ 	<property name="cvv" value="9537"/>
  </bean>
  
  <!-- Non commercial banners -->
@@ -203,7 +207,7 @@
  	<property name="picture" value="Global Warning Picture"/>
  	<property name="slogan" value="We change our behavior or change our planet"/>
  	<property name="url" value="https://www.nationalgeographic.es/medio-ambiente/que-es-el-calentamiento-global"/>
- 	<property name="jingle" value="Despacito"/>
+ 	<property name="jingle" value="https://www.youtube.com/watch?v=kJQP7kiw5Fk"/>
  </bean>
  
  

@@ -45,3 +45,5 @@ acme.validation.script = Script expression "{0}" must return true
 acme.money.error.currency = The currency must be €
 acme.money.error.positive = Money must be positive
 acme.error.confirm = You must confirm the action
+acme.date.error.futureDate = Invalid date. This date can't be prior than the present date
+acme.cvv.error.pattern = The CVV must be 3 or 4 digits

@@ -45,3 +45,5 @@ acme.validation.script = El script "{0}" debe devolver true
 acme.money.error.currency = La divisa debe ser €
 acme.money.error.positive = El dinero debe ser positivo
 acme.error.confirm = Debes confirmar la acción
+acme.date.error.futureDate = Fecha incorrecta. La fecha no puede ser anterior a la fecha actual.
+acme.cvv.error.pattern = El CVV debe ser de 3 o 4 dígitos
