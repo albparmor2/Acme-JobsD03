@@ -3,7 +3,10 @@ package acme.entities.offers;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
@@ -19,6 +22,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "deadline"), @Index(columnList = "ticker")
+})
 public class Offer extends DomainEntity {
 
 	/**
@@ -29,12 +35,10 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 
@@ -48,6 +52,7 @@ public class Offer extends DomainEntity {
 	private Money				maxReward;
 
 	@NotBlank
+	@Column(unique = true)
 	@Pattern(regexp = "^O\\w{4}\\-\\d{5}$")
 	private String				ticker;
 

@@ -15,6 +15,6 @@ public interface AuthenticatedRequestaRepository extends AbstractRepository {
 	@Query("select a from Requesta a where a.id = ?1")
 	Requesta findOneById(int id);
 
-	@Query("select a from Requesta a")
+	@Query("select a from Requesta a where a.deadline > current_timestamp")
 	Collection<Requesta> findManyAll();
 }
