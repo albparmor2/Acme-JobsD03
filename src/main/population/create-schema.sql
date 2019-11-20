@@ -33,9 +33,13 @@
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
+        `bronze_description` varchar(255),
+        `bronze_reward` varchar(255),
         `deadline` datetime(6),
-        `description` varchar(255),
-        `goal_reward` integer,
+        `gold_description` varchar(255),
+        `gold_reward` varchar(255),
+        `silver_description` varchar(255),
+        `silver_reward` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -88,8 +92,7 @@
     create table `investor_record` (
        `id` integer not null,
         `version` integer not null,
-        `investing_statement_amount` double precision,
-        `investing_statement_currency` varchar(255),
+        `investing_statement` varchar(255),
         `name` varchar(255),
         `sector` varchar(255),
         `stars` integer,

@@ -94,22 +94,34 @@
 <bean id="challenge01" class="acme.entities.challenges.Challenge">
    <property name="title" value="Do level C"/>
    <property name="deadline" value="2019/11/07 00:00"/>
-   <property name="description" value="Do level C. We have to do all the features for pass the level C."/>
-   <property name="goalReward" value="Bronze"/>
+   <property name="bronzeReward" value="mark 6"/>
+   <property name="bronzeDescription" value="the mark is 6"/>
+   <property name="silverReward" value="mark 8"/>
+   <property name="silverDescription" value="the mark is 8"/>
+   <property name="goldReward" value="mark 9"/>
+   <property name="goldDescription" value="the mark is 9"/>
 </bean>
 
 <bean id="challenge02" class="acme.entities.challenges.Challenge">
    <property name="title" value="Do level B"/>
    <property name="deadline" value="2019/11/07 00:00"/>
-   <property name="description" value="Do level B. We have to do all the features for pass the level B."/>
-   <property name="goalReward" value="Silver"/>
+   <property name="bronzeReward" value="mark 6"/>
+   <property name="bronzeDescription" value="the mark is 6"/>
+   <property name="silverReward" value="mark 8"/>
+   <property name="silverDescription" value="the mark is 8"/>
+   <property name="goldReward" value="mark 9"/>
+   <property name="goldDescription" value="the mark is 9"/>
 </bean>
 
 <bean id="challenge03" class="acme.entities.challenges.Challenge">
    <property name="title" value="Do level A"/>
    <property name="deadline" value="2019/11/07 00:00"/>
-   <property name="description" value="Do level A. We have to do all the features for pass the level A."/>
-   <property name="goalReward" value="Gold"/>
+   <property name="bronzeReward" value="mark 6"/>
+   <property name="bronzeDescription" value="the mark is 6"/>
+   <property name="silverReward" value="mark 8"/>
+   <property name="silverDescription" value="the mark is 8"/>
+   <property name="goldReward" value="mark 9"/>
+   <property name="goldDescription" value="the mark is 9"/>
 </bean>
 
 <!-- Offers -->
@@ -139,14 +151,14 @@
 <bean id="investorRecord01" class="acme.entities.investorRecords.InvestorRecord">
 	<property name="name" value="Marco Antonio"/>
 	<property name="sector" value="Engineering"/>
-	<property name="investingStatement" value="€3000.00"/>
+	<property name="investingStatement" value="the amazing statement"/>
 	<property name="stars" value="3"/>
 </bean>
 
 <bean id="investorRecord02" class="acme.entities.investorRecords.InvestorRecord">
     <property name="name" value="Emilio Quintero"/>
     <property name="sector" value="Analyst"/>
-    <property name="investingStatement" value="€30000.00"/>
+    <property name="investingStatement" value="the amazing statement 2"/>
     <property name="stars" value="5"/>
 </bean>
 

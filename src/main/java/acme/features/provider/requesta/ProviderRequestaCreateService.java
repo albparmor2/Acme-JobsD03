@@ -1,7 +1,9 @@
 
 package acme.features.provider.requesta;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.requestas.Requesta;
 import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.datatypes.Money;
@@ -44,6 +47,12 @@ public class ProviderRequestaCreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert model != null;
 
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("confirmRequesta", "false");
+		} else {
+			request.transfer(model, "confirmRequesta");
+		}
+
 		request.unbind(entity, model, "ticker", "title", "description", "deadline", "reward");
 	}
 
@@ -64,8 +73,10 @@ public class ProviderRequestaCreateService implements AbstractCreateService<Prov
 
 		Requesta r = null;
 
-		r = this.repository.existRequesta(entity.getTicker());
-		errors.state(request, r == null, "ticker", "provider.requesta.form.error.existRequest");
+		if (errors.hasErrors("ticker")) {
+			r = this.repository.existRequesta(entity.getTicker());
+			errors.state(request, r == null, "ticker", "provider.requesta.form.error.existRequest");
+		}
 
 		Boolean confirm = request.getModel().getBoolean("confirmRequesta");
 		errors.state(request, confirm, "confirmRequesta", "acme.error.confirm");
@@ -74,6 +85,12 @@ public class ProviderRequestaCreateService implements AbstractCreateService<Prov
 		if (!errors.hasErrors("reward")) {
 			errors.state(request, reward.getAmount() > 0, "reward", "acme.money.error.positive");
 			errors.state(request, reward.getCurrency().equals("€"), "reward", "acme.money.error.currency");
+		}
+		Boolean correctFutureDate;
+		if (!errors.hasErrors("deadline")) {
+			Calendar calendar = new GregorianCalendar();
+			correctFutureDate = entity.getDeadline().after(calendar.getTime());
+			errors.state(request, correctFutureDate, "deadline", "acme.date.error.futureDate");
 		}
 	}
 

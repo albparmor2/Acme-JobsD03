@@ -10,10 +10,14 @@
 
 authenticated.challenge.form.label.title = Title:
 authenticated.challenge.form.label.deadline = Deadline:
-authenticated.challenge.form.label.description = Description:
-authenticated.challenge.form.label.goalReward = Achievement:
+authenticated.challenge.form.label.bronzeReward = Bronze archivement:
+authenticated.challenge.form.label.bronzeDescription = Bronze description:
+authenticated.challenge.form.label.silverReward = Silver archivement:
+authenticated.challenge.form.label.silverDescription = Silver decription:
+authenticated.challenge.form.label.goldReward = Gold archivement:
+authenticated.challenge.form.label.goldDescription = Gold description:
+
 authenticated.challenge.form.button.return  = Return
 
 authenticated.challenge.list.label.title = Title
 authenticated.challenge.list.label.deadline = Deadline
-authenticated.challenge.list.label.goalReward = Achievement

@@ -1,7 +1,9 @@
 
 package acme.features.consumer.offer;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.offers.Offer;
 import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.datatypes.Money;
@@ -43,6 +46,12 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("confirmOffer", "false");
+		} else {
+			request.transfer(model, "confirmOffer");
+		}
+
 		request.unbind(entity, model, "title", "deadline", "text", "minReward", "maxReward", "ticker");
 
 	}
@@ -62,10 +71,18 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		Offer o = null;
+		Boolean correctFutureDate;
+		if (!errors.hasErrors("deadline")) {
+			Calendar calendar = new GregorianCalendar();
+			correctFutureDate = entity.getDeadline().after(calendar.getTime());
+			errors.state(request, correctFutureDate, "deadline", "acme.date.error.futureDate");
+		}
 
-		o = this.repository.existOffer(entity.getTicker());
-		errors.state(request, o == null, "ticker", "consumer.offer.form.error.existOffer");
+		Offer o = null;
+		if (!errors.hasErrors("ticker")) {
+			o = this.repository.existOffer(entity.getTicker());
+			errors.state(request, o == null, "ticker", "consumer.offer.form.error.existOffer");
+		}
 
 		Boolean confirm = request.getModel().getBoolean("confirmOffer");
 		errors.state(request, confirm, "confirmOffer", "acme.error.confirm");
