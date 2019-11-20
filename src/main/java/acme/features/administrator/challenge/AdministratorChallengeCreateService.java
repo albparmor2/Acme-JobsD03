@@ -1,6 +1,9 @@
 
 package acme.features.administrator.challenge;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,7 +43,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "goalReward");
+		request.unbind(entity, model, "title", "deadline", "bronzeReward", "bronzeDescription", "silverReward", "silverDescription", "goldReward", "goldDescription");
 	}
 
 	@Override
@@ -57,6 +60,13 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Boolean correctFutureDate;
+		if (!errors.hasErrors("deadline")) {
+			Calendar calendar = new GregorianCalendar();
+			correctFutureDate = entity.getDeadline().after(calendar.getTime());
+			errors.state(request, correctFutureDate, "deadline", "acme.date.error.futureDate");
+		}
 	}
 
 	@Override

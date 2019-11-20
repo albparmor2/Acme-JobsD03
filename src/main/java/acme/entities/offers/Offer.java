@@ -29,12 +29,10 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
 	private Date				moment;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				deadline;
 

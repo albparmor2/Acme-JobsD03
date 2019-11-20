@@ -5,9 +5,7 @@ import javax.persistence.Entity;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
-import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,8 +26,8 @@ public class InvestorRecord extends DomainEntity {
 	@NotBlank
 	private String				sector;
 
-	@NotNull
-	private Money				investingStatement;
+	@NotBlank
+	private String				investingStatement;
 
 	@Min(value = 0)
 	@Max(value = 5)

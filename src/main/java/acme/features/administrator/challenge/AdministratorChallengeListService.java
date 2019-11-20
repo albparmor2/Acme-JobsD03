@@ -32,7 +32,7 @@ public class AdministratorChallengeListService implements AbstractListService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "goalReward");
+		request.unbind(entity, model, "title", "deadline");
 	}
 
 	@Override
