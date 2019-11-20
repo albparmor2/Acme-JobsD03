@@ -47,7 +47,7 @@ public class Requesta extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^R\\w{4}\\-\\d{5}$")
+	@Pattern(regexp = "^R\\w{4}\\-\\d{5}$", message = "requesta.error.pattern")
 	private String				ticker;
 
 }

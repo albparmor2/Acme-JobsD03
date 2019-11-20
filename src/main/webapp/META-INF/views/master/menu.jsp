@@ -56,12 +56,10 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.requesta" action="/provider/requesta/list"/>
 			<acme:menu-suboption code="master.menu.provider.requesta.create" action="/provider/requesta/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
       <acme:menu-suboption code="master.menu.consumer.offer.create" action="/consumer/offer/create"/>
 		</acme:menu-option>
 	</acme:menu-left>

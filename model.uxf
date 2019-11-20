@@ -358,8 +358,12 @@ Shout
 --
 + title: String {NotBlank}
 + deadline: Date{Temporal(TIMESTAMP)}
-+ description: String {NotBlank}
-+ goalReward: Enum {NotNull}</panel_attributes>
++ bronzeDescription: String {NotBlank}
++ bronzeReward: String {NotBlank}
++ silverDescription: String {NotBlank}
++ silverReward: String {NotBlank}
++ goldDescription: String {NotBlank}
++ goldReward: String {NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -379,7 +383,8 @@ Shout
 + website: String {URL}
 + contactPhone: String {NotBlank}
 + contactEmail: String {NotBlank, Email}
-+ stars: Integer {Min, Max}</panel_attributes>
++ stars: Integer {Min, Max}
++ / incorporated: String {Transient} </panel_attributes>
     <additional_attributes/>
   </element>
   <element>

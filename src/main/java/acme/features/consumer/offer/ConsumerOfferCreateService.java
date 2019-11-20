@@ -90,12 +90,12 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		Money minR = entity.getMinReward();
 		if (!errors.hasErrors("minReward")) {
 			errors.state(request, minR.getAmount() > 0, "minReward", "acme.money.error.positive");
-			errors.state(request, minR.getCurrency().equals("€"), "minReward", "acme.money.error.currency");
+			errors.state(request, minR.getCurrency().equals("€") || minR.getCurrency().equals("EUR"), "minReward", "acme.money.error.currency");
 		}
 		Money maxR = entity.getMaxReward();
 		if (!errors.hasErrors("maxReward")) {
 			errors.state(request, maxR.getAmount() > 0, "maxReward", "acme.money.error.positive");
-			errors.state(request, maxR.getCurrency().equals("€"), "maxReward", "acme.money.error.currency");
+			errors.state(request, maxR.getCurrency().equals("€") || maxR.getCurrency().equals("EUR"), "maxReward", "acme.money.error.currency");
 		}
 	}
 

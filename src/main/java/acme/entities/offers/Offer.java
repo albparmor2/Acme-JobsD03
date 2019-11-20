@@ -53,7 +53,7 @@ public class Offer extends DomainEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^O\\w{4}\\-\\d{5}$")
+	@Pattern(regexp = "^O\\w{4}\\-\\d{5}$", message = "offer.error.pattern")
 	private String				ticker;
 
 }

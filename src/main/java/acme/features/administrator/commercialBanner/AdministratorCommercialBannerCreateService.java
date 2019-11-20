@@ -63,8 +63,9 @@ public class AdministratorCommercialBannerCreateService implements AbstractCreat
 		assert errors != null;
 
 		Boolean correctFutureDate;
+		Calendar calendar;
 		if (!errors.hasErrors("expirationDate")) {
-			Calendar calendar = new GregorianCalendar();
+			calendar = new GregorianCalendar();
 			correctFutureDate = entity.getExpirationDate().after(calendar.getTime());
 			errors.state(request, correctFutureDate, "expirationDate", "acme.date.error.futureDate");
 		}

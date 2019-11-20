@@ -26,3 +26,4 @@ consumer.offer.list.label.minReward = Recompensa mínima
 consumer.offer.list.label.maxReward = Recompensa máxima
 
 consumer.offer.form.error.existOffer = Ya existe alguna oferta con esta id
+offer.error.pattern = The ticker must begin with the letter O, followed by 4 letters, one hyphen and 5 digits

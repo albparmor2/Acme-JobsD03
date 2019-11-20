@@ -18,10 +18,5 @@ provider.requesta.form.label.confirmRequesta = Confirm
 provider.requesta.form.button.return  = Return
 provider.requesta.form.button.create = Create
 	 
-
-provider.requesta.list.label.moment = Moment
-provider.requesta.list.label.title = Title
-provider.requesta.list.label.deadline = Deadline
-provider.requesta.list.label.reward = Reward
-
 provider.requesta.form.error.existRequest = There are any request with this ticker
+requesta.error.pattern = The ticker must begin with the letter R, followed by 4 letters, one hyphen and 5 digits

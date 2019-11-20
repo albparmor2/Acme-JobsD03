@@ -84,7 +84,7 @@ public class ProviderRequestaCreateService implements AbstractCreateService<Prov
 		Money reward = entity.getReward();
 		if (!errors.hasErrors("reward")) {
 			errors.state(request, reward.getAmount() > 0, "reward", "acme.money.error.positive");
-			errors.state(request, reward.getCurrency().equals("€"), "reward", "acme.money.error.currency");
+			errors.state(request, reward.getCurrency().equals("€") || reward.getCurrency().equals("EUR"), "reward", "acme.money.error.currency");
 		}
 		Boolean correctFutureDate;
 		if (!errors.hasErrors("deadline")) {

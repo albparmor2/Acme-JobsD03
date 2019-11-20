@@ -17,13 +17,6 @@
 
 <acme:form>
 	<acme:form-textbox code="consumer.offer.form.label.title" path="title"/>
-	
-	<jstl:if test="${command != 'create'}">
-		<acme:form-moment 
-			code="consumer.offer.form.label.moment" 
-			path="moment"
-			readonly="true"/>
-	</jstl:if>
 	<acme:form-moment code="consumer.offer.form.label.deadline" path="deadline"/>
 	<acme:form-textarea code="consumer.offer.form.label.text" path="text"/>
 	<acme:form-money code="consumer.offer.form.label.minReward" path="minReward"/>
@@ -31,7 +24,7 @@
 	<acme:form-textbox code="consumer.offer.form.label.ticker" path="ticker"/>
 	<acme:form-checkbox code="consumer.offer.form.label.confirmOffer" path="confirmOffer"/>
 	
-	<acme:form-submit test="${command == 'create'}"
+	<acme:form-submit 
 	code="consumer.offer.form.button.create" 
 	action="/consumer/offer/create"/>
 	
